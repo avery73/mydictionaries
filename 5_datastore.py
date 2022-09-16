@@ -18,6 +18,9 @@ room-number,use,sq-ft,price
 
 
 
+from ftplib import ftpcp
+
+
 datastore = { "medical":[
       { "room-number": 100,
         "use": "reception",
@@ -47,3 +50,9 @@ datastore = { "medical":[
 
       ]
 }
+
+outfile = open('retail_space.csv','w')
+outfile.write('room-number,use,sq-ft,price\n')
+
+for i in datastore['medical']: # i is each dictionary, integers have to be converted to strings before writing to file
+  outfile.write(str(i['room-number'])+','+i['use']+','+str(i['sq-ft'])+','+str(i['price'])+'\n')
