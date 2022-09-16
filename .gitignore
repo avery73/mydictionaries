@@ -1,4 +1,4 @@
+.gitignore
 .venv/
 sometext.txt
 info_security.txt
-.gitignore/info/exclude
